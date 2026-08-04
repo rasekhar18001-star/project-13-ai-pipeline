@@ -11,7 +11,7 @@ Files inspected before editing:
 - judge.py
 - error_budget.py
 - psi.py
-- C:\Users\Dipanjan\Desktop\Project 13 — A Pipeline for an AI Application.pdf (text extracted with pdftotext; the command emitted a MiKTeX log permission warning after output)
+
 
 Files created or changed: The normalized application, config, corpus, evaluation, SRE, monitoring, rollout, deployment, scripts, unit tests, CI workflow, environment example, secret-scan config, ignore rules, README, NEXT_STEPS, and this log. The four root starter files were inspected and retained until cleanup.
 
@@ -55,7 +55,6 @@ Assumptions:
 Remote work not completed: No GitHub authentication, Git remote, CI run, cloud evaluation result, or cloud deployment evidence was available or fabricated.
 The local cloud evaluation was skipped because OPENAI_API_KEY and OPENAI_BASE_URL were not present. Local gitleaks execution was skipped because the executable is not installed; CI runs gitleaks/gitleaks-action@v2.
 
-No human intervention recorded during this run beyond supplying the two required human-selected values.
 
 Follow-up correction after user-reported cloud evaluation:
 - The user reported 8/9 grounded cases, with `current-policy` failing because the generated answer inferred that last year's email process was no longer prescribed.
