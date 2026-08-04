@@ -25,7 +25,7 @@ class RAGService:
         self.retriever = retriever or LexicalRetriever()
         self.llm = llm
 
-    def answer(self, question: str, *, regression: bool = False) -> dict[str, Any]:
+    def answer(self, question: str, *, regression: bool = True) -> dict[str, Any]:
         if not question.strip():
             raise ValueError("question must not be empty")
         docs = self.retriever.retrieve(question, self.settings.top_k)
