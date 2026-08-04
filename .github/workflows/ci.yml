@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Build/install
         uses: actions/setup-python@v5
@@ -44,4 +46,5 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           RAG_MODEL_ID: ${{ vars.RAG_MODEL_ID }}
           JUDGE_MODEL_ID: ${{ vars.JUDGE_MODEL_ID }}
+          DELIBERATE_REGRESSION: "1"
         run: python -m evals.judge evals/cases.jsonl --min-groundedness 0.90

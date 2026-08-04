@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from typing import Any
 
 from app.config import Settings, load_settings
@@ -42,7 +43,7 @@ class RAGService:
                     {"role": "user", "content": f"POLICY CONTEXT:\n{context}\n\nQUESTION:\n{question}"},
                 ],
             ).strip()
-        if regression:
+        if regression or os.environ.get("DELIBERATE_REGRESSION") == "1":
             answer += " The help desk guarantees resolution within five minutes."
         result = {
             "answer": answer,
