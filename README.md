@@ -69,5 +69,3 @@ Local Ollama routes `gpt-oss:120b-cloud` through localhost; a hosted GitHub runn
 ## Regression demonstration
 
 After initializing Git, committing a clean `main`, and configuring Git identity, run `python scripts/create_regression_branch.py`. It creates and optionally commits `regression-demo` but never pushes. Push it manually with `git push -u origin regression-demo`, open a PR, and retain the real failed CI link or screenshot. Return with `git switch main`.
-
-`REPORT.docx` is intentionally not generated yet. `RELIABILITY_MEMO.docx` is also outside this task.
