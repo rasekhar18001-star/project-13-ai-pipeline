@@ -1,0 +1,5 @@
+[reliability]
+eval_groundedness_threshold = 0.90
+quality_slo = 0.99
+psi_moderate_threshold = 0.10
+psi_alert_threshold = 0.20

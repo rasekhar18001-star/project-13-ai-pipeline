@@ -1,0 +1,9 @@
+[local]
+base_url = "http://localhost:11434/v1"
+rag_model_id = "gpt-oss:120b-cloud"
+judge_model_id = "gpt-oss:120b-cloud"
+
+[ci]
+base_url = "https://ollama.com/v1"
+rag_model_id = "gpt-oss:120b"
+judge_model_id = "gpt-oss:120b"

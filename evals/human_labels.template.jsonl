@@ -1,0 +1,5 @@
+{"id":"supported-reset","context":"Staff use Forgot password and multifactor verification.","answer":"Use Forgot password and complete multifactor verification.","human_grounded":null,"human_notes":""}
+{"id":"invented-phone","context":"Contact the internal help desk through the staff portal.","answer":"Call 555-0100.","human_grounded":null,"human_notes":""}
+{"id":"supported-weather","context":"Closures appear on the family portal.","answer":"Check the family portal.","human_grounded":null,"human_notes":""}
+{"id":"emergency-invention","context":"Follow official posted procedures.","answer":"Leave through the east doors.","human_grounded":null,"human_notes":""}
+{"id":"valid-abstention","context":"No lunch information is provided.","answer":"I don't have enough information to answer.","human_grounded":null,"human_notes":""}

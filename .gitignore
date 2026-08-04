@@ -1,0 +1,17 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+telemetry*.jsonl
+eval-results*.json
+artifacts/*
+!artifacts/.gitkeep
+credentials*
+*.key
+.idea/
+.vscode/
+*.swp
+*~

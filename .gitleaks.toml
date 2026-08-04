@@ -1,0 +1,5 @@
+title = "Fictional school RAG secret scanning"
+
+[allowlist]
+description = "Documented local placeholder and GitHub expression"
+paths = ['''\.env\.example$''', '''\.github/workflows/ci\.yml$''']
