@@ -18,6 +18,7 @@ def test_grounded_generation_uses_fake():
     docs = [Document("password_reset", "Use Forgot password.", Path("fake"))]
     result = RAGService(settings(), LexicalRetriever(docs), FakeLLM()).answer("password reset")
     assert result["answer"] == "Use Forgot password."
+    assert "guarantees resolution within five minutes" not in result["answer"]
     assert result["retrieved_document_ids"] == ["password_reset"]
 
 
@@ -32,6 +33,14 @@ def test_deliberate_regression_adds_unsupported_claim():
     docs = [Document("password_reset", "Use Forgot password.", Path("fake"))]
     result = RAGService(settings(), LexicalRetriever(docs), FakeLLM()).answer("password reset", regression=True)
     assert "guarantees resolution within five minutes" in result["answer"]
+    assert "five minutes" not in result["retrieved_context"]
+
+
+def test_deliberate_regression_environment_flag(monkeypatch):
+    docs = [Document("password_reset", "Use Forgot password.", Path("fake"))]
+    monkeypatch.setenv("DELIBERATE_REGRESSION", "1")
+    result = RAGService(settings(), LexicalRetriever(docs), FakeLLM()).answer("password reset")
+    assert result["answer"].endswith("The help desk guarantees resolution within five minutes.")
     assert "five minutes" not in result["retrieved_context"]
 
 
